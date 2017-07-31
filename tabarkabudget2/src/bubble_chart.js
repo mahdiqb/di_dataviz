@@ -308,7 +308,7 @@ function createBubbleChart() {
         }
     }
 
-    var bubbleMin= window.innerWidth / 80;
+    var bubbleMin= window.innerWidth / 70;
     var bubbleMax= window.innerWidth / 30;
 
     function createCanvas(parentDOMElement) {
