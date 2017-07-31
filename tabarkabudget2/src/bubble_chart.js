@@ -308,6 +308,9 @@ function createBubbleChart() {
         }
     }
 
+    var bubbleMin=8;
+    var bubbleMax=60;
+
     function createCanvas(parentDOMElement) {
         // Create a SVG element inside the provided selector with desired size.
         svg = d3.select(parentDOMElement)
@@ -332,10 +335,14 @@ function createBubbleChart() {
     //resize function
 
     function resize() {
-        width = 2 * (window.innerWidth / 3), height = 2 * (window.innerHeight / 3);
+        width = 8 * (window.innerWidth / 10), height = 8 * (window.innerHeight / 10);
         svg.attr("width", width).attr("height", height);
         //force.size([width, height]).resume();
+        bubbleMin= width/100;
+        bubbleMax= width/30;
     }
+
+
 
     //////////////////////////////////////////////////////////////
     
@@ -366,7 +373,7 @@ function createBubbleChart() {
         //var maxRadius = 780000;
         radiusScale = d3.scalePow()
             .exponent(0.5)
-            .range([8, 60])  // Range between 2 and 25 pixels
+            .range([bubbleMin, bubbleMax])  // Range between 2 and 25 pixels
             .domain([0, maxRadius]);   // Domain between 0 and the largest bubble radius
 
         fillColorScale = getFillColorScale();
