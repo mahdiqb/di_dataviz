@@ -1,0 +1,96 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bubble Chart Template</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bubble_chart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+
+    <script src="data/bubble_parameters.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div id="wrapper" style="text-align: center">
+    <div id="header">
+        <h1 id="report_title"></h1>
+    </div>
+
+    <div id="timeline">
+        <div class="dot" id="one">
+            <span></span>
+            <date>Décembre 2014</date>
+        </div>
+        <div class="dot" id="two">
+            <span></span>
+            <date>Janvier 2016</date>
+        </div>
+        <div class="dot" id="three">
+            <span></span>
+            <date>Mai 2016</date>
+        </div>
+        <div class="dot" id="four">
+            <span></span>
+            <date>Juillet 2017</date>
+        </div>
+        <div class="inside"></div>
+    </div>
+
+    <div id="chart"></div>
+
+    <article class='modal one' >
+        <date>Décembre 2014</date>
+        <h2>Après les élections 87 Nidaa</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates magnam excepturi laboriosam minima soluta, quae. Sunt repellat totam non, et sed in veniam fuga odio eius! Nesciunt amet optio recusandae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum sit dolor sint amet, corporis aperiam nihil, quas, accusantium enim suscipit rem non possimus officiis. Recusandae hic at, fugiat eos eveniet.</p>
+    </article>
+
+    <article class='modal two'>
+        <date>Janvier 2016</date>
+        <h2>Mohsen Marzouk et le nouveau parti</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates magnam excepturi laboriosam minima soluta, quae. Sunt repellat totam non, et sed in veniam fuga odio eius! Nesciunt amet optio recusandae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum sit dolor sint amet, corporis aperiam nihil, quas, accusantium enim suscipit rem non possimus officiis. Recusandae hic at, fugiat eos eveniet.</p>
+    </article>
+
+    <article class='modal three'>
+        <date>Mai 2016</date>
+        <h2>Encore d'autres changements</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates magnam excepturi laboriosam minima soluta, quae. Sunt repellat totam non, et sed in veniam fuga odio eius! Nesciunt amet optio recusandae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum sit dolor sint amet, corporis aperiam nihil, quas, accusantium enim suscipit rem non possimus officiis. Recusandae hic at, fugiat eos eveniet.</p>
+    </article>
+
+    <article class='modal four'>
+        <date>Juillet 2017</date>
+        <h2>Un 3ème parti</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates magnam excepturi laboriosam minima soluta, quae. Sunt repellat totam non, et sed in veniam fuga odio eius! Nesciunt amet optio recusandae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum sit dolor sint amet, corporis aperiam nihil, quas, accusantium enim suscipit rem non possimus officiis. Recusandae hic at, fugiat eos eveniet.</p>
+    </article>
+        <div style="height: 100px">
+
+        </div>
+
+
+    <div class="footer">
+        <p id="footer_text"></p>
+        <p>
+            <a href="">Democracy International</a>
+        </p>
+    </div>
+    </div>
+</div>
+
+<div class="check" hidden>
+    <input type="checkbox" id="switch1" name="switch1" class="switch" checked hidden="tru" style="display: none"/>
+    <label for="switch1"></label>
+</div>
+
+<script src="lib/d3.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+<script src="src/index.js"></script>
+<script src="src/tooltip.js"></script>
+<script src="bubbles.js"></script>
+</body>
+</html>
