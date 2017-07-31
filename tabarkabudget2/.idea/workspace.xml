@@ -29,7 +29,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bubble_parameters.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bubble_parameters.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/bubble_parameters.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-527">
@@ -39,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bubble_chart.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bubble_chart.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/bubble_chart.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -47,6 +47,16 @@
               <folding>
                 <marker date="1501538965190" expanded="true" signature="54:58" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,6 +93,7 @@
         <option value="$PROJECT_DIR$/data/bubble_parameters.js" />
         <option value="$PROJECT_DIR$/src/bubble_chart.js" />
         <option value="$PROJECT_DIR$/css/bubble_chart.css" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -882,12 +893,12 @@
       <option name="presentableId" value="Default" />
       <updated>1501469059563</updated>
       <workItem from="1501469060873" duration="2105000" />
-      <workItem from="1501511931667" duration="7089000" />
+      <workItem from="1501511931667" duration="7170000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9194000" />
+    <option name="totallyTimeSpent" value="9275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -980,14 +991,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/bubble_parameters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-527">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bubble_chart.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -1007,6 +1010,22 @@
           <folding>
             <marker date="1501538965190" expanded="true" signature="54:58" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/bubble_parameters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-527">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
