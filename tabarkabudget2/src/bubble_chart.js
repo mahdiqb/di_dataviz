@@ -312,8 +312,8 @@ function createBubbleChart() {
         // Create a SVG element inside the provided selector with desired size.
         svg = d3.select(parentDOMElement)
             .append('svg')
-            .attr('width', BUBBLE_PARAMETERS.width)
-            .attr('height', BUBBLE_PARAMETERS.height);
+            //.attr('width', BUBBLE_PARAMETERS.width)
+           // .attr('height', BUBBLE_PARAMETERS.height);
 
         // Specify margins and the inner width and height
         margin = {top: 20, right: 20, bottom: 50, left: 80},
@@ -322,8 +322,21 @@ function createBubbleChart() {
 
         // Create an inner SVG panel with padding on all sides for axes
         inner_svg = svg.append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");        
-    }    
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        resize();
+        d3.select(window).on("resize", resize);
+    }
+
+
+    //resize function
+
+    function resize() {
+        width = 2 * (window.innerWidth / 3), height = 2 * (window.innerHeight / 3);
+        svg.attr("width", width).attr("height", height);
+        //force.size([width, height]).resume();
+    }
+
     //////////////////////////////////////////////////////////////
     
     var bubbleChart = function bubbleChart(parentDOMElement, rawData) {
