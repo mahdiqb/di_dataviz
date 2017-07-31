@@ -308,8 +308,8 @@ function createBubbleChart() {
         }
     }
 
-    var bubbleMin=8;
-    var bubbleMax=60;
+    var bubbleMin= window.innerWidth / 80;
+    var bubbleMax= window.innerWidth / 30;
 
     function createCanvas(parentDOMElement) {
         // Create a SVG element inside the provided selector with desired size.
@@ -325,7 +325,7 @@ function createBubbleChart() {
 
         // Create an inner SVG panel with padding on all sides for axes
         inner_svg = svg.append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+           // .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
         resize();
         d3.select(window).on("resize", resize);
@@ -335,7 +335,7 @@ function createBubbleChart() {
     //resize function
 
     function resize() {
-        width = 8 * (window.innerWidth / 10), height = 8 * (window.innerHeight / 10);
+        width = 10 * (window.innerWidth / 10), height = 8 * (window.innerHeight / 10);
         svg.attr("width", width).attr("height", height);
         //force.size([width, height]).resume();
         bubbleMin= width/100;
