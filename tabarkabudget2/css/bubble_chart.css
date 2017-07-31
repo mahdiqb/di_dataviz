@@ -37,7 +37,7 @@ a, a:visited, a:active {
 }
 
 .bubble_group_label {
-  font-size: 2vw;
+  font-size: 3vh;
   fill: #aaa;
   cursor: default;
 }

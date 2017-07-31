@@ -43,9 +43,9 @@
         <entry file="file://$PROJECT_DIR$/css/bubble_chart.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="39" column="14" lean-forward="false" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+              <caret line="39" column="16" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
               <folding>
-                <marker date="1501538871506" expanded="true" signature="54:58" ph="{...}" />
+                <marker date="1501538965190" expanded="true" signature="54:58" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -882,12 +882,12 @@
       <option name="presentableId" value="Default" />
       <updated>1501469059563</updated>
       <workItem from="1501469060873" duration="2105000" />
-      <workItem from="1501511931667" duration="6995000" />
+      <workItem from="1501511931667" duration="7089000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9100000" />
+    <option name="totallyTimeSpent" value="9194000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -959,7 +959,7 @@
         <state relative-caret-position="442">
           <caret line="26" column="16" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
           <folding>
-            <marker date="1501538871506" expanded="true" signature="54:58" ph="{...}" />
+            <marker date="1501538965190" expanded="true" signature="54:58" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1003,9 +1003,9 @@
     <entry file="file://$PROJECT_DIR$/css/bubble_chart.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="39" column="14" lean-forward="false" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+          <caret line="39" column="16" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
           <folding>
-            <marker date="1501538871506" expanded="true" signature="54:58" ph="{...}" />
+            <marker date="1501538965190" expanded="true" signature="54:58" ph="{...}" />
           </folding>
         </state>
       </provider>
