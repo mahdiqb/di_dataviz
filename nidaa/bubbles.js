@@ -7,7 +7,15 @@
     var yearsTitleX = {
         'Bloc Al Horra du Mouvement Machrouu Tounes': - width /3,
         'Mouvement Nidaa Tounes': 0,
-        'Bloc National': width /3
+        'Bloc National': width /3,
+        'Aucun bloc': 0
+    };
+
+    var yearsTitleY = {
+        'Bloc Al Horra du Mouvement Machrouu Tounes': -220,
+        'Mouvement Nidaa Tounes': -220,
+        'Bloc National': -220,
+        'Aucun bloc': 250
     };
 
     var svg = d3.select("#chart")
@@ -16,6 +24,17 @@
         .attr("width",width)
         .append("g")
         .attr("transform","translate(" + width / 2 +","+height/2+")")
+
+    function resize() {
+        width = 10 * (window.innerWidth / 10), height = 8 * (window.innerHeight / 10);
+        svg.attr("width", width).attr("height", height);
+        //force.size([width, height]).resume();
+        bubbleMin= width/100;
+        bubbleMax= width/50;
+    }
+
+    var bubbleMin= window.innerWidth / 100;
+    var bubbleMax= window.innerWidth / 50;
 
 //    <defs>
         //<pattern id="" height="100%" width="100%" patternContentUnits="objectBoundingBox">
@@ -38,7 +57,7 @@
             .attr('class', 'year')
             .attr('font-family','Calibri')
             .attr('x', function (d) { return yearsTitleX[d]; })
-            .attr('y', -220)
+            .attr('y', function (d) { return yearsTitleY[d]; })
             .attr('text-anchor', 'middle')
             .text(function (d) { return d; });
     }
@@ -91,7 +110,7 @@
         .defer(d3.csv,"nidaa2.csv")
         .await(ready)
 
-    var radiusScale = d3.scaleSqrt().domain([4451,115045]).range([15,35])
+    var radiusScale = d3.scaleSqrt().domain([4451,115045]).range([bubbleMin,bubbleMax])
 
     var forceXj2016 = d3.forceX(function (d) {
         if (d.janv16 === 'Bloc Al Horra du Mouvement Machrouu Tounes')
@@ -262,6 +281,9 @@
                     return d.y
                 })
         }
+
+        resize();
+        d3.select(window).on("resize", resize);
     }
 
 })();

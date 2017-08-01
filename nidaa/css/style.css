@@ -1,5 +1,5 @@
 body {
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
 .checkcaption {
@@ -44,6 +44,7 @@ div#timeline {
   height: 10px;
   width: 100%;
   position: relative;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 div#timeline .inside {
   position: absolute;
@@ -52,6 +53,7 @@ div#timeline .inside {
   width: 0%;
   top: 3px;
   left: 0;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 div#timeline .dot {
   z-index: 99;
@@ -64,6 +66,7 @@ div#timeline .dot {
   top: -15px;
   text-align: center;
   cursor: pointer;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 div#timeline .dot:nth-child(1) {
   left: 20%;
@@ -86,7 +89,6 @@ div#timeline .dot:hover {
           transform: scale(1.2);
 }
 div#timeline .dot date {
-  font-family: roboto;
   font-size: 1.1rem;
   display: block;
   position: relative;
