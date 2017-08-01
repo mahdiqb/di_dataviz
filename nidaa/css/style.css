@@ -40,18 +40,18 @@ body {
 
 div#timeline {
   background-color: #6ab0de;
-  margin-top: 150px;
-  height: 10px;
+  margin-top: 5vh;
+  height: 1vh;
   width: 100%;
   position: relative;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 div#timeline .inside {
   position: absolute;
-  height: 4px;
+  height: 0.5vh;
   background-color: #fff;
   width: 0%;
-  top: 3px;
+  top: 0.4vh;
   left: 0;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
@@ -59,11 +59,11 @@ div#timeline .dot {
   z-index: 99;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
-  width: 40px;
-  height: 40px;
+  width: 4vw;
+  height: 4vw;
   border-radius: 50%;
   position: absolute;
-  top: -15px;
+  top: -2vw;
   text-align: center;
   cursor: pointer;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
@@ -92,14 +92,14 @@ div#timeline .dot date {
   font-size: 1.1rem;
   display: block;
   position: relative;
-  top: -60px;
+  top: -8vw;
   text-align: center;
 }
 div#timeline .dot span {
   display: inline-block;
   margin-top: 10px;
-  width: 20px;
-  height: 20px;
+  width: 2vw;
+  height: 2vw;
   background-color: #fff;
   position: relative;
   border-radius: 50%;
@@ -163,4 +163,8 @@ div.mask article h2 {
 }
 div.mask article p {
   line-height: 130%;
+}
+
+.year {
+  font-size: 2vh;
 }

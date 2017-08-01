@@ -5,7 +5,7 @@
     var tooltip = floatingTooltip('gates_tooltip', 240);
 
     var yearsTitleX = {
-        'Bloc Al Horra du Mouvement Machrouu Tounes': - width /3,
+        'Bloc Al Horra': - width /3,
         'Mouvement Nidaa Tounes': 0,
         'Bloc National': width /3,
         'Aucun bloc': 0
