@@ -1,6 +1,6 @@
 (function () {
-    var width = 940,
-        height = 600;
+    var width = 8 * (window.innerWidth / 10)
+    var height = 8 * (window.innerHeight / 10);
 
     var tooltip = floatingTooltip('gates_tooltip', 240);
 
@@ -12,21 +12,23 @@
     };
 
     var yearsTitleY = {
-        'Bloc Al Horra du Mouvement Machrouu Tounes': -220,
-        'Mouvement Nidaa Tounes': -220,
-        'Bloc National': -220,
-        'Aucun bloc': 250
+        'Bloc Al Horra du Mouvement Machrouu Tounes': -height / 2.5,
+        'Mouvement Nidaa Tounes': -height / 2.5,
+        'Bloc National': -height / 2.5,
+        'Aucun bloc': height / 2.5
     };
 
     var svg = d3.select("#chart")
         .append("svg")
         .attr("height",height)
         .attr("width",width)
+        .style("display", "block")
+        .style("margin", "auto")
         .append("g")
         .attr("transform","translate(" + width / 2 +","+height/2+")")
 
     function resize() {
-        width = 10 * (window.innerWidth / 10), height = 8 * (window.innerHeight / 10);
+        width = 8 * (window.innerWidth / 10), height = 8 * (window.innerHeight / 10);
         svg.attr("width", width).attr("height", height);
         //force.size([width, height]).resume();
         bubbleMin= width/100;

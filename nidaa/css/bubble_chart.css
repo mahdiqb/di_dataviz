@@ -3,8 +3,8 @@ a, a:visited, a:active {
 }
 
 .container {
-  max-width: 940px;
-  margin: auto;
+  /*max-width: 940px;
+  margin: auto;*/
 }
 
 .button {
