@@ -31,12 +31,12 @@
         width = 8 * (window.innerWidth / 10), height = 8 * (window.innerHeight / 10);
         svg.attr("width", width).attr("height", height);
         //force.size([width, height]).resume();
-        bubbleMin= width/100;
-        bubbleMax= width/50;
+        bubbleMin= width/80;
+        bubbleMax= width/40;
     }
 
-    var bubbleMin= window.innerWidth / 100;
-    var bubbleMax= window.innerWidth / 50;
+    var bubbleMin= window.innerWidth / 80;
+    var bubbleMax= window.innerWidth / 40;
 
 //    <defs>
         //<pattern id="" height="100%" width="100%" patternContentUnits="objectBoundingBox">
