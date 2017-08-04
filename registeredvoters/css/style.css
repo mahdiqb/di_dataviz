@@ -11,7 +11,7 @@
 #sections {
   position: relative;
   display: inline-block;
-  width: 30%;
+  width: 35%;
   top: 0px;
   z-index: 90;
   padding-bottom: 200px;
@@ -44,7 +44,7 @@
   display: inline-block;
   position: fixed;
   top: 60px;
-  width: 60%;
+  width: 55%;
   height: 90%;
   z-index: 1;
   margin-left: 0;
