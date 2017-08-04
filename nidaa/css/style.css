@@ -89,10 +89,10 @@ div#timeline .dot:hover {
           transform: scale(1.2);
 }
 div#timeline .dot date {
-  font-size: 1.1rem;
+  font-size: 1.7vmin;
   display: block;
   position: relative;
-  top: -2vw;
+  top: -6vw;
   text-align: center;
 }
 div#timeline .dot span {
@@ -157,7 +157,7 @@ div.mask article date {
 }
 div.mask article h2 {
   font-family: merriweather, sans-serif;
-  font-size: 5rem;
+  font-size: 5vmin;
   padding: 10px 0;
   border-bottom: solid #111 2px;
   margin-bottom: 20px;
