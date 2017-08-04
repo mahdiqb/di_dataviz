@@ -108,11 +108,11 @@ div#timeline .dot span {
 
 article {
   display: none;
-  position: relative;
+  /*position: relative;*/
   top: 30px;
   max-width: 960px;
   background-color: #fff;
-  padding: 20px;
+  /*padding: 20px;*/
   margin: auto;
 }
 article date {
@@ -122,9 +122,10 @@ article date {
 article h2 {
   font-family: merriweather, sans-serif;
   font-size: 5rem;
-  padding: 10px 0;
+  /*padding: 10px 0;*/
   border-bottom: solid #111 2px;
   margin-bottom: 20px;
+  margin-top: 0;
 }
 article p {
   line-height: 130%;
