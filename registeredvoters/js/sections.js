@@ -569,7 +569,7 @@ var scrollVis = function () {
           svg.selectAll(".homie")
               .transition()
               .duration(1000)
-              .attr("width", 0)
+              .attr("height", 0)
 
       g.selectAll('.count-title2')
           .transition()
