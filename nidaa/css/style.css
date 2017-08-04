@@ -44,6 +44,7 @@ div#timeline {
   height: 1vh;
   width: 100%;
   position: relative;
+  padding-bottom: 0.5vmin;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 div#timeline .inside {

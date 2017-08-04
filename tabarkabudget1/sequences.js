@@ -232,7 +232,7 @@ function drawLegend() {
 
   // Dimensions of legend item: width, height, spacing, radius of rounded rect.
   var li = {
-    w: 125, h: 30, s: 3, r: 3
+    w: 145, h: 30, s: 3, r: 3
   };
 
   var legend = d3.select("#legend").append("svg:svg")
