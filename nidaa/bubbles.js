@@ -15,7 +15,7 @@
         'Bloc Al Horra': -height / 2.5,
         'Mouvement Nidaa Tounes': -height / 2.5,
         'Bloc National': -height / 2.5,
-        'Aucun bloc': height / 2.1
+        'Aucun bloc': height / 2.3
     };
 
     var svg = d3.select("#chart")
