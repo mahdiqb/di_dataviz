@@ -568,12 +568,12 @@ var scrollVis = function () {
 
           svg.selectAll(".homie")
               .transition()
-              .duration(1000)
+              .duration(500)
               .attr("height", 0)
 
       g.selectAll('.count-title2')
           .transition()
-          .duration(600)
+          .duration(800)
           .attr('opacity', 1.0);
   }
 
