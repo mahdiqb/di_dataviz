@@ -12,10 +12,10 @@
     };
 
     var yearsTitleY = {
-        'Bloc Al Horra du Mouvement Machrouu Tounes': -height / 2.5,
+        'Bloc Al Horra': -height / 2.5,
         'Mouvement Nidaa Tounes': -height / 2.5,
         'Bloc National': -height / 2.5,
-        'Aucun bloc': height / 2.5
+        'Aucun bloc': height / 2.2
     };
 
     var svg = d3.select("#chart")
