@@ -1,6 +1,6 @@
 (function () {
     var width = 8 * (window.innerWidth / 10)
-    var height = 8 * (window.innerHeight / 10);
+    var height = 7 * (window.innerHeight / 10);
 
     var tooltip = floatingTooltip('gates_tooltip', 240);
 
@@ -28,7 +28,7 @@
         .attr("transform","translate(" + width / 2 +","+height/2+")")
 
     function resize() {
-        width = 8 * (window.innerWidth / 10), height = 8 * (window.innerHeight / 10);
+        width = 8 * (window.innerWidth / 10), height = 7 * (window.innerHeight / 10);
         svg.attr("width", width).attr("height", height);
         //force.size([width, height]).resume();
         bubbleMin= width/80;
