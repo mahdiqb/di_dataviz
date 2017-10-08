@@ -332,7 +332,7 @@ var scrollVis = function () {
           .attr('class', 'title count-title highlight')
           .attr('x', width / 2)
           .attr('y', height / 3)
-          .text('4,975,277');
+          .text('5,377,849');
 
       g.append('text')
           .attr('class', 'sub-title count-title')
@@ -697,7 +697,7 @@ var scrollVis = function () {
               "categorie": "18-24",
               "values": [
                   {
-                      "value": 297978,
+                      "value": 458237,
                       "rate": "Registered"
                   },
                   {
@@ -710,7 +710,7 @@ var scrollVis = function () {
               "categorie": "25-34",
               "values": [
                   {
-                      "value": 1233465,
+                      "value": 1337098,
                       "rate": "Registered"
                   },
                   {
@@ -723,7 +723,7 @@ var scrollVis = function () {
               "categorie": "35-50",
               "values": [
                   {
-                      "value": 1556992,
+                      "value": 1638586,
                       "rate": "Registered"
                   },
                   {
@@ -736,7 +736,7 @@ var scrollVis = function () {
               "categorie": "Past 50",
               "values": [
                   {
-                      "value": 1886842,
+                      "value": 1943928,
                       "rate": "Registered"
                   },
                   {
