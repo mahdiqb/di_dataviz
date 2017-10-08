@@ -1,0 +1,54 @@
+[
+    {
+        "categorie": "18-24", 
+        "values": [
+            {
+                "value": 297978, 
+                "rate": "Registered"
+            }, 
+            {
+                "value": 1380272, 
+                "rate": "Eligible"
+            }
+        ]
+    }, 
+    {
+        "categorie": "25-34", 
+        "values": [
+            {
+                "value": 1233465, 
+                "rate": "Registered"
+            }, 
+            {
+                "value": 1948441, 
+                "rate": "Eligible"
+            }
+        ]
+    }, 
+    {
+        "categorie": "35-50", 
+        "values": [
+            {
+                "value": 1556992, 
+                "rate": "Registered"
+            }, 
+            {
+                "value": 2262650, 
+                "rate": "Eligible"
+            }
+        ]
+    }, 
+    {
+        "categorie": "Past 50", 
+        "values": [
+            {
+                "value": 1886842, 
+                "rate": "Registered"
+            }, 
+            {
+                "value": 2511399, 
+                "rate": "Eligible"
+            }
+        ]
+    }
+]
