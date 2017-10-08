@@ -63,6 +63,15 @@
   </div>
 </div>
 
+<script>
+window.onscroll = function(ev) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        window.location.replace("http://localhost:8080/munreg");
+
+    }
+};
+</script>
+
 
 <script src="lib/d3.js"></script>
 <script src="js/tip.js"></script>
