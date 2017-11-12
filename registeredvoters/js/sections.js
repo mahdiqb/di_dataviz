@@ -310,7 +310,7 @@ var scrollVis = function () {
       .attr('class', 'title openvis-title')
       .attr('x', width / 2)
       .attr('y', height / 3)
-      .text('2017');
+      .text('2018');
 
     g.append('text')
       .attr('class', 'sub-title openvis-title')
