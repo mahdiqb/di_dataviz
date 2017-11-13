@@ -129,7 +129,7 @@
         });
 
         function draw (varname) {
-          var centers = getCenters(varname, [width, height]);
+          var centers = getCenters(varname, [width+ width/10, height]);
           force.on("tick", tick(centers, varname));
           labels(centers)
           force.start();
