@@ -67,6 +67,7 @@
     <script>
       d3.csv('data/result.csv', function (error, data) {
 
+	  
         var width = window.innerWidth, height = window.innerHeight;
         var fill = d3.scale.ordinal().range(['#C70039','#827354','#3159D7','#72856a','#2a3285','#383435','D77231','31D77C'])
         var svg = d3.select("#chart").append("svg")
@@ -85,15 +86,14 @@
 
         var padding = 4;
         var maxRadius = d3.max(_.pluck(data, 'radius'));
-
-
+		
         var getCenters = function (vname, size) {
           var centers, map;
           centers = _.uniq(_.pluck(data, vname)).map(function (d) {
             return {name: d, value: 1};
           });
 
-          map = d3.layout.pack().size(size).ratio(2/1);
+          map = d3.layout.treemap().size(size).ratio(1/1);
           map.nodes({children: centers});
 
           return centers;
@@ -144,8 +144,8 @@
             for (var i = 0; i < data.length; i++) {
               var o = data[i];
               var f = foci[o[varname]];
-              o.y += (f.y - o.y) * e.alpha;
-              o.x += (f.x - o.x) * e.alpha;
+              o.y += ((f.y + (f.dy / 2)) - o.y) * e.alpha;
+              o.x += ((f.x + (f.dx / 2)) - o.x) * e.alpha;
             }
             nodes.each(collide(.11))
               .attr("cx", function (d) { return d.x; })
@@ -161,7 +161,7 @@
           .attr("class", "label")
           .text(function (d) { return d.name })
           .attr("transform", function (d) {
-            return "translate(" + (d.x - ((d.name.length)*3)) + ", " + (d.y - d.r) + ")";
+            return "translate(" + (d.x + (d.dx / 2)) + ", " + (d.y + 20) + ")";
           });
         }
 
