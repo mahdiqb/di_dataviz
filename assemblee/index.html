@@ -21,6 +21,7 @@
         opacity: .8;
       }
       .btn-group {
+		
         margin-left: 30%;
       }
       .label {
@@ -109,6 +110,12 @@
           .style("fill", function (d) { return fill(d.bloc); })
           .on("mouseover", function (d) { showPopover.call(this, d); })
           .on("mouseout", function (d) { removePopovers(); })
+		  .on("click", function(d){
+        //var url = "http://somelink.com/link.php?id=";
+        var url = d.href;
+        //$(location).attr('href', url);
+		window.location = url;    
+    });
 
         nodes.transition().duration(1000)
           .attr("r", function (d) { return d.radius; })
