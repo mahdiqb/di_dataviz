@@ -12,7 +12,8 @@
     <style type="text/css">
       body {
         background-color: black;
-        padding-left: 50px;
+        margin: auto;
+		display: block;
       }
       circle {
         stroke: white;
@@ -20,7 +21,7 @@
         opacity: .8;
       }
       .btn-group {
-        margin-left: 330px;
+        margin-left: 30%;
       }
       .label {
         fill: white;
@@ -57,7 +58,7 @@
         <input type="radio" name="options"> Sexe
       </label>
     </div>
-    <div id="chart"></div>
+    <div id="chart" style="margin:auto;"></div>
     <script src="lib/d3.js"></script>
     <script src="lib/jquery.js"></script>
     <script src="lib/bootstrap.js"></script>
@@ -65,7 +66,7 @@
     <script>
       d3.csv('data/result.csv', function (error, data) {
 
-        var width = 1000, height = 1000;
+        var width = window.innerWidth, height = window.innerHeight;
         var fill = d3.scale.ordinal().range(['#827d92','#827354','#523536','#72856a','#2a3285','#383435'])
         var svg = d3.select("#chart").append("svg")
             .attr("width", width)
@@ -73,7 +74,10 @@
 
         for (var j = 0; j < data.length; j++) {
           //data[j].radius = +data[j].comb / 2;
-		  data[j].radius = 10;
+		  if (window.innerHeight > window.innerWidth)
+			data[j].radius = window.innerHeight / 150;
+		else
+			data[j].radius = window.innerWidth / 150;
           data[j].x = Math.random() * width;
           data[j].y = Math.random() * height;
         }
@@ -118,7 +122,7 @@
         });
 
         function draw (varname) {
-          var centers = getCenters(varname, [800, 800]);
+          var centers = getCenters(varname, [width, height]);
           force.on("tick", tick(centers, varname));
           labels(centers)
           force.start();
