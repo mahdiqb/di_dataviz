@@ -22,7 +22,8 @@
       }
       .btn-group {
 		
-        margin-left: 30%;
+        margin-left: auto;
+		margin-right: auto;
       }
       .label {
         fill: white;
@@ -53,10 +54,9 @@
         <input type="radio" name="options"> Age
       </label>
       <label class="btn btn-primary" id="region">
-        <input type="radio" name="options"> Région
-      </label>
+        <input type="radio" name="options"> Region
       <label class="btn btn-primary" id="sexe">
-        <input type="radio" name="options"> Sexe
+        <input type="radio" name="options"> Gender
       </label>
     </div>
     <div id="chart" style="margin:auto;"></div>
@@ -178,7 +178,7 @@
             trigger: 'manual',
             html : true,
             content: function() { 
-              return '<img src="'+ d.photo+ '" />'+"Nom : " + d.nom + "<br/>Bloc : " + d.bloc + "<br/>Région : " + d.region +
+              return '<img src="'+ d.photo+ '" />'+"Name : " + d.nom + "<br/>Bloc : " + d.bloc + "<br/>Region : " + d.region +
                      "<br/>Age : " + d.age + "<br/>Profession : " + d.profession; }
           });
           $(this).popover('show')
