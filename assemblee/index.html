@@ -93,7 +93,7 @@
             return {name: d, value: 1};
           });
 
-          map = d3.layout.pack().size(size);
+          map = d3.layout.pack().size(size).ratio(2/1);
           map.nodes({children: centers});
 
           return centers;
@@ -129,7 +129,7 @@
         });
 
         function draw (varname) {
-          var centers = getCenters(varname, [width+ width/10, height]);
+          var centers = getCenters(varname, [width, height]);
           force.on("tick", tick(centers, varname));
           labels(centers)
           force.start();
