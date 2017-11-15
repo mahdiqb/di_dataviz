@@ -114,8 +114,10 @@
         //var url = "http://somelink.com/link.php?id=";
         var url = d.href;
         //$(location).attr('href', url);
-		window.location = url;    
-    });
+		//window.location = url;    
+		var win = window.open(url, '_blank');
+		win.focus();
+	});
 
         nodes.transition().duration(1000)
           .attr("r", function (d) { return d.radius; })
