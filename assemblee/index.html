@@ -18,11 +18,11 @@
       circle {
         stroke: white;
         stroke-width: 2px;
-        opacity: .8;
+        opacity: .9;
       }
       .btn-group {
 		
-        margin-left: 30%;
+        //margin-left: 30%;
       }
       .label {
         fill: white;
@@ -42,23 +42,58 @@
     </script>
   </head>
   <body>
+  <div class=" text-center"> 
     <div class="btn-group" data-toggle="buttons">
       <label class="btn btn-primary active" id="bloc">
-        <input type="radio" name="options"> Bloc
+        <input type="radio" name="options"> الكتلة
       </label>
       <label class="btn btn-primary" id="profession">
-        <input type="radio" name="options"> Profession
+        <input type="radio" name="options"> المهنة
       </label>
       <label class="btn btn-primary" id="age">
-        <input type="radio" name="options"> Age
+        <input type="radio" name="options"> السن
       </label>
       <label class="btn btn-primary" id="region">
-        <input type="radio" name="options"> Region
+        <input type="radio" name="options"> المنطقة
 	</label>
       <label class="btn btn-primary" id="sexe">
-        <input type="radio" name="options"> Gender
+        <input type="radio" name="options"> الجنس
       </label>
     </div>
+	<br>
+	<div class="btn-group" data-toggle="buttons">
+	<label class="btn btn-primary mb1 bg-blue" style="background-color: #a9a9a9; border-color:#a9a9a9;" id="blocs">
+        <input type="radio" name="options"> جميع الكتل
+      </label>
+      <label class="btn btn-primary mb1 bg-blue" style="background-color: #3159d7; border-color:#3159d7;" id="Mouvement_Ennahdha1">
+        <input type="radio" name="options"> حركة النهضة
+      </label>
+      <label class="btn btn-primary bg-red" style="background-color: #c70039; border-color:#c70039;" id="Mouvement_Nidaa_Tounes1">
+        <input type="radio" name="options"> نداء تونس
+      </label>
+	        <label class="btn btn-primary" id="Bloc_Al_Horra_du_Mouvement_Machrouu_Tounes1" style="background-color: #66ffcc; border-color:#66ffcc;">
+        <input type="radio" name="options"> كتلة الحرة
+	</label>
+      <label class="btn btn-primary" style="background-color: #e58846; border-color:#e58846" id="Bloc_Démocrate1">
+        <input type="radio" name="options"> الكتلة الديمقراطية
+      </label>
+      <label class="btn btn-primary" id="Front_Populaire1" style="background-color: #FF0099; border-color:#FF0099">
+        <input type="radio" name="options"> الجبهة الشعبية
+      </label>
+	  <label class="btn btn-primary" id="Union_Patriotique_Libre1" style="background-color: #009933; border-color:#009933">
+        <input type="radio" name="options"> الاتحاد الوطني الحر
+      </label>
+	  <label class="btn btn-primary" id="Afek_Tounes_et_lappel_des_tunisiens_à_létranger1" style="background-color: #ffc400; border-color:#ffc400">
+        <input type="radio" name="options"> آفاق تونس
+      </label>
+	  <label class="btn btn-primary" id="Bloc_National1" style="background-color: #99cc00; border-color:#99cc00">
+        <input type="radio" name="options"> الكتلة الوطنية
+      </label>
+	  <label class="btn btn-primary" id="Aucun_bloc1" style="background-color: #FFA07A; border-color:#FFA07A">
+        <input type="radio" name="options"> غير المنتمين
+      </label>
+    </div>
+	</div>
     <div id="chart" style="margin:auto;"></div>
     <script src="lib/d3.js"></script>
     <script src="lib/jquery.js"></script>
@@ -69,7 +104,7 @@
 
 	  
         var width = window.innerWidth, height = window.innerHeight;
-        var fill = d3.scale.ordinal().range(['#C70039','#827354','#3159D7','#72856a','#2a3285','#383435','D77231','31D77C'])
+        var fill = d3.scale.ordinal().range(['#C70039','#99cc00','#3159D7','#FF0099','#66ffcc','#e58846','#009933','#FFA07A','#ffc400'])
         var svg = d3.select("#chart").append("svg")
             .attr("width", width)
             .attr("height", height);
@@ -131,11 +166,23 @@
         });
 
         function draw (varname) {
+		if(varname.indexOf("1") !== -1)
+		{
+			nodes.transition()
+				.duration(2000)
+				.style('opacity', function(d) { var test = d.groupe_id+"1";
+												if (test !== varname) return 0; });
+		}
+		else if (varname == "blocs")
+		{nodes.transition()
+				.duration(2000)
+				.style('opacity', 0.9);}
+		else{
           var centers = getCenters(varname, [width, height]);
           force.on("tick", tick(centers, varname));
           labels(centers)
           force.start();
-        }
+        }}
 
         function tick (centers, varname) {
           var foci = {};
@@ -180,8 +227,8 @@
             trigger: 'manual',
             html : true,
             content: function() { 
-              return '<img src="'+ d.photo+ '" />'+"Name : " + d.nom + "<br/>Bloc : " + d.bloc + "<br/>Region : " + d.region +
-                     "<br/>Age : " + d.age + "<br/>Profession : " + d.profession; }
+              return '<img src="'+ d.photo+ '" />'+"الاسم : " + d.nom + "<br/>الكتلة : " + d.bloc + "<br/>المنطقة : " + d.region +
+                     "<br/>السن : " + d.age + "<br/>المهنة : " + d.profession; }
           });
           $(this).popover('show')
         }
