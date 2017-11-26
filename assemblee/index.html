@@ -171,8 +171,8 @@
 			nodes.transition()
 				.duration(2000)
 				.style('opacity', function(d) { var test = d.groupe_id+"1";
-												if (test !== varname) return 0; });
-		}
+												if (test !== varname) return 0;
+												else if (test == varname) return 0.9;});}
 		else if (varname == "blocs")
 		{nodes.transition()
 				.duration(2000)
