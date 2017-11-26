@@ -18,15 +18,15 @@
       circle {
         stroke: white;
         stroke-width: 2px;
-        opacity: .8;
+        opacity: .9;
       }
       .btn-group {
 		
-        margin-left: 30%;
+        //margin-left: 30%;
       }
       .label {
         fill: white;
-        font-size: 11px;
+        font-size: 16px;
       }
     </style>
     <script type="text/javascript">
@@ -42,6 +42,7 @@
     </script>
   </head>
   <body>
+  <div class=" text-center"> 
     <div class="btn-group" data-toggle="buttons">
       <label class="btn btn-primary active" id="bloc">
         <input type="radio" name="options"> Bloc
@@ -53,13 +54,47 @@
         <input type="radio" name="options"> Age
       </label>
       <label class="btn btn-primary" id="region">
-        <input type="radio" name="options"> Region
+        <input type="radio" name="options"> Région
 	</label>
       <label class="btn btn-primary" id="sexe">
-        <input type="radio" name="options"> Gender
+        <input type="radio" name="options"> Sexe
       </label>
     </div>
-    <div id="chart" style="margin:auto;"></div>
+	<br>
+	<div class="btn-group" data-toggle="buttons">
+	<label class="btn btn-primary mb1 bg-blue" style="background-color: #a9a9a9; border-color:#a9a9a9;" id="blocs">
+        <input type="radio" name="options"> Tous les Blocs
+      </label>
+      <label class="btn btn-primary mb1 bg-blue" style="background-color: #3159d7; border-color:#3159d7;" id="Mouvement_Ennahdha1">
+        <input type="radio" name="options"> Ennahdha
+      </label>
+      <label class="btn btn-primary bg-red" style="background-color: #c70039; border-color:#c70039;" id="Mouvement_Nidaa_Tounes1">
+        <input type="radio" name="options"> Nidaa Tounes
+      </label>
+	        <label class="btn btn-primary" id="Bloc_Al_Horra_du_Mouvement_Machrouu_Tounes1" style="background-color: #66ffcc; border-color:#66ffcc;">
+        <input type="radio" name="options"> Bloc Al Horra
+	</label>
+      <label class="btn btn-primary" style="background-color: #e58846; border-color:#e58846" id="Bloc_Démocrate1">
+        <input type="radio" name="options"> Bloc Démocrate
+      </label>
+      <label class="btn btn-primary" id="Front_Populaire1" style="background-color: #FF0099; border-color:#FF0099">
+        <input type="radio" name="options"> Front Populaire
+      </label>
+	  <label class="btn btn-primary" id="Union_Patriotique_Libre1" style="background-color: #009933; border-color:#009933">
+        <input type="radio" name="options"> Union Patriotique Libre
+      </label>
+	  <label class="btn btn-primary" id="Afek_Tounes_et_lappel_des_tunisiens_à_létranger1" style="background-color: #ffc400; border-color:#ffc400">
+        <input type="radio" name="options"> Afek Tounes
+      </label>
+	  <label class="btn btn-primary" id="Bloc_National1" style="background-color: #99cc00; border-color:#99cc00">
+        <input type="radio" name="options"> Bloc National
+      </label>
+	  <label class="btn btn-primary" id="Aucun_bloc1" style="background-color: #FFA07A; border-color:#FFA07A">
+        <input type="radio" name="options"> Aucun Bloc
+      </label>
+    </div>
+	
+    <div id="chart" style="margin:auto;"></div></div>
     <script src="lib/d3.js"></script>
     <script src="lib/jquery.js"></script>
     <script src="lib/bootstrap.js"></script>
@@ -68,8 +103,8 @@
       d3.csv('data/result.csv', function (error, data) {
 
 	  
-        var width = window.innerWidth, height = window.innerHeight;
-        var fill = d3.scale.ordinal().range(['#C70039','#3159D7','#827354','#72856a','#2a3285','#383435','D77231','31D77C'])
+        var width = (window.innerWidth/10)* 8.5, height = (window.innerHeight/10)*9;
+        var fill = d3.scale.ordinal().range(['#C70039','#99cc00','#3159D7','#FF0099','#66ffcc','#e58846','#009933','#FFA07A','#ffc400'])
         var svg = d3.select("#chart").append("svg")
             .attr("width", width)
             .attr("height", height);
@@ -111,7 +146,7 @@
           .on("mouseover", function (d) { showPopover.call(this, d); })
           .on("mouseout", function (d) { removePopovers(); })
 		  .on("click", function(d){
-        //var url = "http://somelink.com/link.php?id=";
+         //var url = "http://somelink.com/link.php?id=";
         var url = "https://majles.marsad.tn/2014/fr/"+d.href;
         //$(location).attr('href', url);
 		//window.location = url;    
@@ -131,11 +166,23 @@
         });
 
         function draw (varname) {
+		if(varname.indexOf("1") !== -1)
+		{
+			nodes.transition()
+				.duration(2000)
+				.style('opacity', function(d) { var test = d.groupe_id+"1";
+												if (test !== varname) return 0; });
+		}
+		else if (varname == "blocs")
+		{nodes.transition()
+				.duration(2000)
+				.style('opacity', 0.9);}
+		else{
           var centers = getCenters(varname, [width, height]);
           force.on("tick", tick(centers, varname));
           labels(centers)
           force.start();
-        }
+        }}
 
         function tick (centers, varname) {
           var foci = {};
@@ -163,7 +210,7 @@
           .attr("class", "label")
           .text(function (d) { return d.name })
           .attr("transform", function (d) {
-            return "translate(" + (d.x + (d.dx / 4)) + ", " + (d.y + 20) + ")";
+            return "translate(" + (d.x + (d.dx / 2) - 30) +", " + (d.y + 20) + ")";
           });
         }
 
@@ -180,7 +227,7 @@
             trigger: 'manual',
             html : true,
             content: function() { 
-              return '<img src="'+ d.photo+ '" />'+"Name : " + d.nom + "<br/>Bloc : " + d.bloc + "<br/>Region : " + d.region +
+             return '<img src="'+ d.photo+ '" />'+"Nom : " + d.nom + "<br/>Bloc : " + d.bloc + "<br/>Région : " + d.region +
                      "<br/>Age : " + d.age + "<br/>Profession : " + d.profession; }
           });
           $(this).popover('show')
