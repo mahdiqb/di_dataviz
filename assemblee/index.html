@@ -103,7 +103,7 @@
       d3.csv('data/result.csv', function (error, data) {
 
 	  
-        var width = (window.innerWidth/10)*9, height = (window.innerHeight/10)*9;
+        var width = (window.innerWidth/10)* 8.5, height = (window.innerHeight/10)*9;
         var fill = d3.scale.ordinal().range(['#C70039','#99cc00','#3159D7','#FF0099','#66ffcc','#e58846','#009933','#FFA07A','#ffc400'])
         var svg = d3.select("#chart").append("svg")
             .attr("width", width)
