@@ -9,6 +9,90 @@
     <title>L'assemblée</title>
     <!--<link rel="shortcut icon" href="http://projects.delimited.io/experiments/common/delimited-favicon-v4.ico">-->
     <link href="css/bootstrap.css" rel="stylesheet">
+	
+	<!--new abdou-->
+	
+	<!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,700,900' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome CSS -->
+    <link href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- materialize -->
+    <link href="assets/materialize/css/materialize.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- shortcodes -->
+    <link href="assets/css/shortcodes/shortcodes.css" rel="stylesheet">
+    <!-- Style CSS -->
+    <link href="assets/style.css" rel="stylesheet">
+    <style>
+        .slick-prev:before,
+        .slick-next:before {
+            color: black;
+        }
+
+        .slick-prev {
+            left: -18px;
+        }
+
+        .slick-next {
+            right: 0px;
+        }
+
+        .main-content {
+            padding-top: 9vh;
+        }
+
+        .webradar {
+            height: 71vh;
+            width: 100%;
+            vertical-align: middle;
+            padding-top: 25%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .logo {
+            display: block;
+            margin: auto;
+        }
+
+        .parent {
+            position: relative;
+        }
+
+        .layer {
+            width: 100%;
+            height: 71vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #b3dced; /* Old browsers */
+            background: -moz-linear-gradient(-45deg, #b3dced 0%, #29b8e5 19%, #2386c4 42%, #29b8e5 67%, #29b8e5 74%, #29b8e5 87%, #bce0ee 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(-45deg, #b3dced 0%,#29b8e5 19%,#2386c4 42%,#29b8e5 67%,#29b8e5 74%,#29b8e5 87%,#bce0ee 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(135deg, #b3dced 0%,#29b8e5 19%,#2386c4 42%,#29b8e5 67%,#29b8e5 74%,#29b8e5 87%,#bce0ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=1 );
+            opacity: 0;
+            -webkit-transition: opacity .5s ease-out;
+            -moz-transition: opacity .5s ease-out;
+            -o-transition: opacity .5s ease-out;
+            transition: opacity .5s ease-out;
+            cursor: pointer;
+            
+        }
+
+        .layer:hover {
+            opacity: .2;
+        }
+    </style>
+	
+	<!--end new abdou-->
+	
+	
     <style type="text/css">
       body {
         background-color: black;
@@ -42,8 +126,60 @@
     </script>
   </head>
   <body>
-  <div class=" text-center"> 
-    <div class="btn-group" data-toggle="buttons">
+ 
+	<!--header from abdou-->
+	
+	<header id="header" class="tt-nav sticky transparent-header" style="z-index: 1500;">
+        <div class="header-sticky light-header">
+            <div class="container">
+                <div id="materialize-menu" class="menuzord menuzord-responsive"><a href="javascript:void(0)" class="showhide" style="display: none;"><em></em><em></em><em></em></a><a href="index.html"
+                        class="logo-brand"><img class="logo-dark" src="./img/logo.png" alt=""><img class="logo-light" src="./img/logo.png" alt=""></a>
+                    <ul class="menuzord-menu pull-left light menuzord-indented scrollable" style="max-height: 400px;">
+                        <li ><a href="/">Home</a></li>
+                        <li class=""><a href="javascript:void(0)">Municipal <span class="indicator"><i class="fa"></i></span></a>
+                            <!-- react-text: 15 -->
+                            <!-- /react-text -->
+                            <ul class="dropdown" style="right: auto;">
+                                <li><a href="/munre">Insights</a></li>
+                                <li><a href="/detailed-reg">Registration</a></li>
+                                <li><a href="/reg-performance">Registration perfomance</a></li>
+                            </ul>
+                        </li>
+                        <li class=""><a href="javascript:void(0)">election data<span class="indicator"><i class="fa"></i></span></a>
+                            <!-- react-text: 25 -->
+                            <!-- /react-text -->
+                            <ul class="dropdown" style="right: auto; display: none;">
+                                <li><a href="/invalid">Invalid</a></li>
+                                <li><a href="/turnout">Turnout</a></li>
+                                <li><a href="/socio">Socio Election</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/">election result</a>
+                            <ul class="dropdown" style="right: auto;">
+                              <li><a href="javascript:void(0)">Maps</a>
+                                <ul class="dropdown" style="right: auto;">
+                                  <li><a href="/result/2011/index.html">Parliamentary 2011</a></li>
+                                  <li><a href="/result/2014/demos/Maps_Bubble/Elections2014.html">Parliamentary 2014</a></li>
+                                  <li><a href="/result/visPrez/demos/Maps_with_Drill_Down/Tunisia_presidential_election_2008.html">Presidential 2014</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="javascript:void(0)">Archive</a></li>
+                            </ul>
+                        </li>   
+                        <li class="active"><a href="/">Web Radar</a></li>
+                        <li class="scrollable-fix"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+	
+	<!--end header from abdou-->
+<div class="container-fluid main-content">
+ <div class="row">
+ 
+ <div class=" text-center">
+     <div class="btn-group" data-toggle="buttons">
       <label class="btn btn-primary active" id="bloc">
         <input type="radio" name="options"> الكتلة
       </label>
@@ -95,6 +231,9 @@
     </div>
 	
     <div id="chart" style="margin:auto;"></div></div>
+	
+	</div>
+	</div>
     <script src="lib/d3.js"></script>
     <script src="lib/jquery.js"></script>
     <script src="lib/bootstrap.js"></script>
@@ -261,6 +400,45 @@
         }
       });
     </script>
+	
+	<!-- js abdou -->
+	
+	 <script src="assets/js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $('.fade4').slick({
+            arrows: true,
+            autoplay: true,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            pauseOnHover: true
+        });
+        $('.fade2').slick({
+            arrows: true,
+            autoplay: true,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            pauseOnHover: true
+        });
+        $('.fade3').slick({
+            arrows: true,
+            autoplay: true,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            pauseOnHover: true
+        });
+    </script>
+    <script src="assets/js/menuzord.js"></script>
+    <script src="assets/js/scripts.js"></script>
+	
+	<!--end js abdou-->
+	
   </body>
 
 <!-- Mirrored from projects.delimited.io/experiments/force-bubbles/radial.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Nov 2017 23:55:24 GMT -->
