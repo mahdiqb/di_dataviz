@@ -1,0 +1,1 @@
+table.wikitable{margin-top:1em;margin-bottom:1em;background:#F9F9F9;border:1px #AAA solid;border-collapse:collapse}table.wikitable th,table.wikitable td{border:1px #AAA solid;padding:.3em}table.wikitable th,.wikitable_header{background:#F2F2F2;text-align:center}table.wikitable caption{margin-left:inherit;margin-right:inherit}
